@@ -1,0 +1,107 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 260px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: var(--s6) var(--s5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-bottom: var(--s8);
+  padding: 0 var(--s2);
+}
+
+.sidebar-logo-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--cyan-dim);
+  border: 1px solid rgba(0, 200, 215, 0.4);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-cyan);
+}
+
+.sidebar-logo-text {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.sidebar-logo-text span {
+  color: var(--cyan);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  border-radius: var(--r-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--ease);
+}
+
+.nav-item:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.nav-item.active {
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  border: 1px solid rgba(0, 200, 215, 0.2);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+/* ── MAIN CONTENT ── */
+.main-content {
+  flex: 1;
+  background: var(--bg);
+  overflow-y: auto;
+  position: relative;
+}
+
+.main-scroll-area {
+  padding: var(--s10) var(--s16);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Shared Page Title Styles (to be used across pages) */
+.page-header { margin-bottom: var(--s8); }
+.page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: var(--s2);
+}
+.page-subtitle { font-size: var(--text-base); color: var(--text-muted); }

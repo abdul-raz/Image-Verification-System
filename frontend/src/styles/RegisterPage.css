@@ -1,0 +1,81 @@
+.register-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.register-card {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.register-card h2 {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.file-name {
+  color: #27ae60;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.error-message {
+  background: #fee;
+  color: #c00;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c00;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+}
+
+.submit-btn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}

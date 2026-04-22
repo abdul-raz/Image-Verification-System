@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+dist/
+build/
+coverage/
+blockchain-setup/node_modules/
+blockchain-setup-zksync/node_modules/
+frontend/node_modules/
+Backend/node_modules/

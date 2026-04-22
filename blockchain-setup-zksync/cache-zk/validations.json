@@ -1,0 +1,99 @@
+{
+  "version": "3.4",
+  "log": [
+    {
+      "contracts/ImageRegistry.sol:ImageRegistry": {
+        "src": "contracts\\ImageRegistry.sol:4",
+        "version": {
+          "withMetadata": "f7e3838e2716c2ea499812b4f7ebf5ca1e8003c0c37d9fba794187fb2e7c8ccc",
+          "withoutMetadata": "f7e3838e2716c2ea499812b4f7ebf5ca1e8003c0c37d9fba794187fb2e7c8ccc",
+          "linkedWithoutMetadata": "f7e3838e2716c2ea499812b4f7ebf5ca1e8003c0c37d9fba794187fb2e7c8ccc"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "registerImage(bytes32,bytes32,string,string,string)",
+          "setVerified(bytes32)",
+          "verifyImage(bytes32)",
+          "getImageStatus(bytes32)",
+          "getImage(bytes32)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ImageRegistry",
+              "label": "images",
+              "type": "t_mapping(t_bytes32,t_struct(Image)22_storage)",
+              "src": "contracts\\ImageRegistry.sol:20"
+            },
+            {
+              "contract": "ImageRegistry",
+              "label": "imageExists",
+              "type": "t_mapping(t_bytes32,t_bool)",
+              "src": "contracts\\ImageRegistry.sol:21"
+            }
+          ],
+          "types": {
+            "t_mapping(t_bytes32,t_struct(Image)22_storage)": {
+              "label": "mapping(bytes32 => struct ImageRegistry.Image)"
+            },
+            "t_bytes32": {
+              "label": "bytes32"
+            },
+            "t_struct(Image)22_storage": {
+              "label": "struct ImageRegistry.Image",
+              "members": [
+                {
+                  "label": "sha256Hash",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "creatorHash",
+                  "type": "t_bytes32"
+                },
+                {
+                  "label": "ipfsHash",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "title",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "description",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "isVerified",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.20"
+      }
+    }
+  ]
+}

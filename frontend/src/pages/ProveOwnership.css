@@ -1,0 +1,271 @@
+.prove-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.prove-form-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--s8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s8);
+  margin-bottom: var(--s4);
+}
+
+@media (max-width: 768px) {
+  .prove-form-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.prove-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  justify-content: center;
+}
+
+.secret-input {
+  background: var(--surface-3);
+  border: 1px solid var(--warning-bg);
+  border-radius: var(--r-md);
+  padding: var(--s4);
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  color: var(--text);
+  text-align: center;
+  letter-spacing: 2px;
+  outline: none;
+  transition: all var(--ease);
+  width: 100%;
+}
+
+.secret-input:focus {
+  border-color: var(--warning);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.secret-input::placeholder {
+  color: var(--text-faint);
+  letter-spacing: 1px;
+}
+
+.prove-upload-zone {
+  border: 2px dashed rgba(0, 200, 215, 0.3);
+  border-radius: var(--r-lg);
+  padding: var(--s6);
+  text-align: center;
+  background: rgba(0, 200, 215, 0.03);
+  cursor: pointer;
+  transition: all var(--ease);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.prove-upload-zone:hover, .prove-upload-zone.drag-active {
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+}
+
+.prove-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--r-md);
+  z-index: 1;
+}
+
+/* ── CERTIFICATE VIEW ── */
+.certificate-container {
+  background: linear-gradient(135deg, var(--surface-2) 0%, rgba(34, 212, 160, 0.05) 100%);
+  border: 1px solid rgba(34, 212, 160, 0.2);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+/* Watermark background pattern */
+.certificate-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(34, 212, 160, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.cert-header {
+  background: linear-gradient(90deg, rgba(34, 212, 160, 0.1) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(34, 212, 160, 0.2);
+  padding: var(--s6) var(--s8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.cert-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--success);
+}
+
+.cert-seal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.cert-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.cert-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--success-bg);
+  color: var(--success);
+  padding: 4px 12px;
+  border-radius: var(--r-full);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(34, 212, 160, 0.3);
+}
+
+.cert-body {
+  padding: var(--s8);
+  position: relative;
+  z-index: 2;
+}
+
+.cert-main-info {
+  display: flex;
+  gap: var(--s8);
+  margin-bottom: var(--s8);
+}
+
+.cert-image {
+  width: 200px;
+  height: 200px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  object-fit: contain;
+  background: var(--surface-3);
+  flex-shrink: 0;
+  padding: var(--s2);
+}
+
+.cert-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+
+.cert-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cert-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.cert-value {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cert-mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--cyan);
+  background: var(--surface-3);
+  padding: var(--s2) var(--s3);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  word-break: break-all;
+  display: inline-block;
+}
+
+.blockchain-verification-box {
+  background: rgba(98, 126, 234, 0.05);
+  border: 1px solid rgba(98, 126, 234, 0.2);
+  border-radius: var(--r-lg);
+  padding: var(--s6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.bv-header {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  color: var(--eth-blue);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s4);
+}
+
+/* ── ERROR STATE ── */
+.fail-card {
+  background: linear-gradient(135deg, var(--surface-2) 0%, rgba(248, 113, 113, 0.05) 100%);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  border-radius: var(--r-xl);
+  padding: var(--s8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s4);
+}
+
+.fail-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--error-bg);
+  color: var(--error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--s2);
+}

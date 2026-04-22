@@ -1,0 +1,61 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\image-verification-system\\blockchain-setup-zksync\\contracts\\ImageRegistry.sol": {
+      "lastModificationDate": 1771308356616,
+      "contentHash": "97143aba87d1d34d620d2314df9f35ea",
+      "sourceName": "contracts/ImageRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "mode": "3"
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "detectMissingLibraries": false,
+          "forceEVMLA": false,
+          "enableEraVMExtensions": false,
+          "libraries": {}
+        },
+        "eraVersion": "1.0.1",
+        "zksolc": {
+          "version": "1.5.1",
+          "compilerSource": "binary",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "mode": "3"
+            },
+            "compilerPath": "C:\\Users\\HP\\AppData\\Local\\hardhat-nodejs\\Cache\\compilers-v2\\zksolc\\zksolc-v1.5.1",
+            "missingLibrariesPath": "./.zksolc-libraries-cache/missingLibraryDependencies.json",
+            "areLibrariesMissing": false,
+            "experimental": {},
+            "libraries": {},
+            "enableEraVMExtensions": false,
+            "forceEVMLA": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ImageRegistry"
+      ]
+    }
+  }
+}
